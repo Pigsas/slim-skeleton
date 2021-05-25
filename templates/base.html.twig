@@ -1,0 +1,35 @@
+<html lang="lt">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="author" content="Pigsas || PrintPlius LT">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+        {% block style %}
+            {{ assets({files: [
+                'assets/css/normalize.css',
+                'assets/css/tailwind.min.css',
+            ], attributes: {
+                as: 'style',
+            }, name: 'base.css'})
+            }}
+        {% endblock %}
+
+
+        <link rel="icon" type="image/png" href="favicon.png">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+
+    {% block javascript %}
+
+    {% endblock %}
+</body>
+</html>
